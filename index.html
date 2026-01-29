@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAZA - The Future of Play</title>
+    <link rel="icon" type="image/png" href="favicon.png"> <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@400;600;700&family=Outfit:wght@300;400;600&display=swap" rel="stylesheet">
+    
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+
+    <style>
+        /* --- RESET & BASE --- */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #050505;
+            color: #ffffff;
+            overflow-x: hidden;
+            height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* --- BACKGROUND GAZA BRANDING --- */
+        .bg-text {
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 30vw;
+            font-weight: 900;
+            color: rgba(255, 255, 255, 0.02);
+            z-index: -1;
+            pointer-events: none;
+            white-space: nowrap;
+        }
+
+        .bg-glow {
+            position: fixed;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(0, 255, 194, 0.15) 0%, rgba(0,0,0,0) 70%);
+            top: -100px;
+            left: -100px;
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* --- GLASSMORPHISM CARD --- */
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.03);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 24px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* --- LAYOUT --- */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+            width: 100%;
+        }
+
+        /* --- NAVBAR --- */
+        nav {
+            padding: 24px 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 28px;
+            font-weight: 700;
+            color: white;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            letter-spacing: 2px;
+        }
+        
+        .logo i { color: #00FFC2; }
+
+        /* --- HERO SECTION --- */
+        .hero {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 40px 20px;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1.2s ease-out;
+        }
+
+        h1 {
+            font-family: 'Rajdhani', sans-serif;
+            font-size: 80px;
+            line-height: 1;
+            font-weight: 700;
+            margin-bottom: 24px;
+            text-transform: uppercase;
+            background: linear-gradient(180deg, #FFFFFF 0%, #888888 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+
+        p.subtitle {
+            font-size: 20px;
+            color: #aaaaaa;
+            margin-bottom: 48px;
+            line-height: 1.6;
+        }
+
+        /* --- BUTTONS --- */
+        .btn-group {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 18px 36px;
+            border-radius: 12px;
+            font-family: 'Rajdhani', sans-serif;
+            font-weight: 700;
+            font-size: 18px;
+            text-decoration: none;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .btn-primary {
+            background: #00FFC2;
+            color: #000;
+            box-shadow: 0 0 20px rgba(0, 255, 194, 0.3);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(0, 255, 194, 0.5);
+            background: #00ffcc;
+        }
+
+        .btn-outline {
+            background: transparent;
+            border: 2px solid rgba(255, 255, 255, 0.2);
+            color: white;
+        }
+
+        .btn-outline:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: white;
+            transform: translateY(-2px);
+        }
+
+        /* --- FEATURES STRIP --- */
+        .features {
+            padding: 40px 0;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            margin-top: auto;
+            background: rgba(0,0,0,0.5);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .feature-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            color: #888;
+        }
+
+        .feature-item i {
+            color: #00FFC2;
+            font-size: 24px;
+        }
+
+        /* --- MOBILE RESPONSIVE --- */
+        @media (max-width: 768px) {
+            h1 { font-size: 48px; }
+            .bg-text { font-size: 40vw; }
+            .btn-group { flex-direction: column; width: 100%; }
+            .btn { width: 100%; justify-content: center; }
+            .features-grid { grid-template-columns: 1fr; gap: 30px; }
+        }
+
+        /* --- ANIMATION --- */
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-glow"></div>
+    <div class="bg-text">GAZA</div>
+
+    <div class="container">
+        <nav>
+            <div class="logo">
+                <i class="fas fa-gamepad"></i> GAZA GAMES
+            </div>
+            <a href="#" style="color: #666; text-decoration: none; font-size: 14px;">v1.0.0</a>
+        </nav>
+    </div>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Unleash Your<br>Potential</h1>
+            <p class="subtitle">
+                The next-generation app store built for gamers and developers.<br>
+                Secure, fast, and completely free.
+            </p>
+
+            <div class="btn-group">
+                <a href="https://terabox.com/s/YOUR_WINDOWS_LINK" target="_blank" class="btn btn-primary">
+                    <i class="fab fa-windows"></i> Download for Windows
+                </a>
+                
+                <a href="https://terabox.com/s/YOUR_ANDROID_LINK" target="_blank" class="btn btn-outline">
+                    <i class="fab fa-android"></i> Get for Android
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="features glass-panel">
+        <div class="container">
+            <div class="features-grid">
+                <div class="feature-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <span>Secure & Verified</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-bolt"></i>
+                    <span>High Speed Downloads</span>
+                </div>
+                <div class="feature-item">
+                    <i class="fas fa-globe"></i>
+                    <span>Global Community</span>
+                </div>
+            </div>
+            <div style="text-align: center; margin-top: 30px; font-size: 12px; color: #444;">
+                © 2026 MR SAQLAIN PRODUCTION. All rights reserved.
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
