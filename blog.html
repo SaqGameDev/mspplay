@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>GAZA - Blog & News</title>
+
+    <link rel="icon" type="image/png" href="assets/favicon.png">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div id="header-placeholder"></div>
+
+    <div class="hero">
+        <h1>Latest News</h1>
+        <p>Updates, patch notes, and developer stories.</p>
+    </div>
+
+    <section class="grid-container">
+
+        <article class="card">
+            <span class="material-symbols-outlined"
+                style="font-size: 40px; color: var(--md-sys-color-primary);">rocket_launch</span>
+            <div style="margin-top: 12px; font-size: 12px; color: var(--md-sys-color-outline);">Oct 24, 2023</div>
+            <h3>Gaza Store v1.0 Launch</h3>
+            <p style="color: var(--md-sys-color-on-surface-variant);">We are officially live! Download the new store
+                today to access exclusive indie titles.</p>
+            <a href="#" class="btn btn-outlined" style="margin-top: 16px;">Read More</a>
+        </article>
+
+        <article class="card">
+            <span class="material-symbols-outlined"
+                style="font-size: 40px; color: var(--md-sys-color-primary);">sports_esports</span>
+            <div style="margin-top: 12px; font-size: 12px; color: var(--md-sys-color-outline);">Oct 20, 2023</div>
+            <h3>New Game: Desert Racer</h3>
+            <p style="color: var(--md-sys-color-on-surface-variant);">Experience high-speed racing in the dunes. Now
+                available for free download.</p>
+            <a href="#" class="btn btn-outlined" style="margin-top: 16px;">Read More</a>
+        </article>
+
+        <article class="card">
+            <span class="material-symbols-outlined"
+                style="font-size: 40px; color: var(--md-sys-color-primary);">security_update</span>
+            <div style="margin-top: 12px; font-size: 12px; color: var(--md-sys-color-outline);">Sep 15, 2023</div>
+            <h3>Security Update</h3>
+            <p style="color: var(--md-sys-color-on-surface-variant);">We've updated our encryption to keep your account
+                safe. Please update your launcher.</p>
+            <a href="#" class="btn btn-outlined" style="margin-top: 16px;">Read More</a>
+        </article>
+
+    </section>
+
+    <div id="footer-placeholder"></div>
+
+    <script>
+        fetch("components/header.html").then(res => res.text()).then(data => document.getElementById("header-placeholder").innerHTML = data);
+        fetch("components/footer.html").then(res => res.text()).then(data => document.getElementById("footer-placeholder").innerHTML = data);
+    </script>
+</body>
+
+</html>

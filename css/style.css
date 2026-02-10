@@ -1,0 +1,225 @@
+/* --- MATERIAL 3 THEME (Dark Mode) --- */
+:root {
+    /* M3 Color Tokens */
+    --md-sys-color-background: #141218;
+    --md-sys-color-surface: #1D1B20;
+    --md-sys-color-surface-variant: #49454F;
+    --md-sys-color-primary: #D0BCFF;
+    /* Light Purple for Dark Mode */
+    --md-sys-color-on-primary: #381E72;
+    --md-sys-color-secondary: #CCC2DC;
+    --md-sys-color-on-surface: #E6E1E5;
+    --md-sys-color-on-surface-variant: #CAC4D0;
+    --md-sys-color-outline: #938F99;
+
+    /* Typography */
+    --font-family: 'Roboto', sans-serif;
+}
+
+body {
+    margin: 0;
+    background-color: var(--md-sys-color-background);
+    color: var(--md-sys-color-on-surface);
+    font-family: var(--font-family);
+    line-height: 1.5;
+}
+
+/* --- TOP APP BAR (Navigation) --- */
+.top-app-bar {
+    background-color: var(--md-sys-color-surface);
+    padding: 0 24px;
+    height: 64px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: 500;
+    color: var(--md-sys-color-on-surface);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.nav-scroller {
+    display: flex;
+    gap: 8px;
+    overflow-x: auto;
+    /* Allows endless pages without breaking layout */
+    padding: 4px;
+    scrollbar-width: none;
+    /* Hide scrollbar */
+}
+
+.nav-link {
+    color: var(--md-sys-color-on-surface-variant);
+    text-decoration: none;
+    padding: 10px 16px;
+    border-radius: 20px;
+    /* Pill shape */
+    font-size: 14px;
+    font-weight: 500;
+    transition: background 0.2s, color 0.2s;
+    white-space: nowrap;
+}
+
+.nav-link:hover,
+.nav-link.active {
+    background-color: rgba(208, 188, 255, 0.08);
+    /* Subtle hover */
+    color: var(--md-sys-color-primary);
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    text-align: center;
+    padding: 80px 24px;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero h1 {
+    font-size: 57px;
+    /* M3 Display Large */
+    line-height: 64px;
+    font-weight: 400;
+    margin-bottom: 24px;
+    letter-spacing: -0.25px;
+}
+
+.hero p {
+    font-size: 22px;
+    /* M3 Headline */
+    color: var(--md-sys-color-on-surface-variant);
+    margin-bottom: 40px;
+}
+
+/* --- M3 BUTTONS --- */
+.button-group {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline
+
+    /* --- MATERIAL 3 THEME (Dark Mode) --- */
+    :root {
+        /* M3 Color Tokens */
+        --md-sys-color-background: #141218;
+        --md-sys-color-surface: #1D1B20;
+        --md-sys-color-surface-variant: #49454F;
+        --md-sys-color-primary: #D0BCFF;
+        /* Light Purple for Dark Mode */
+        --md-sys-color-on-primary: #381E72;
+        --md-sys-color-secondary: #CCC2DC;
+        --md-sys-color-on-surface: #E6E1E5;
+        --md-sys-color-on-surface-variant: #CAC4D0;
+        --md-sys-color-outline: #938F99;
+
+        /* Typography */
+        --font-family: 'Roboto', sans-serif;
+    }
+
+    body {
+        margin: 0;
+        background-color: var(--md-sys-color-background);
+        color: var(--md-sys-color-on-surface);
+        font-family: var(--font-family);
+        line-height: 1.5;
+    }
+
+    /* --- TOP APP BAR (Navigation) --- */
+    .top-app-bar {
+        background-color: var(--md-sys-color-surface);
+        padding: 0 24px;
+        height: 64px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: sticky;
+        top: 0;
+        z-index: 100;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    .logo {
+        font-size: 22px;
+        font-weight: 500;
+        color: var(--md-sys-color-on-surface);
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+
+    .nav-scroller {
+        display: flex;
+        gap: 8px;
+        overflow-x: auto;
+        /* Allows endless pages without breaking layout */
+        padding: 4px;
+        scrollbar-width: none;
+        /* Hide scrollbar */
+    }
+
+    .nav-link {
+        color: var(--md-sys-color-on-surface-variant);
+        text-decoration: none;
+        padding: 10px 16px;
+        border-radius: 20px;
+        /* Pill shape */
+        font-size: 14px;
+        font-weight: 500;
+        transition: background 0.2s, color 0.2s;
+        white-space: nowrap;
+    }
+
+    .nav-link:hover,
+    .nav-link.active {
+        background-color: rgba(208, 188, 255, 0.08);
+        /* Subtle hover */
+        color: var(--md-sys-color-primary);
+    }
+
+    /* --- HERO SECTION --- */
+    .hero {
+        text-align: center;
+        padding: 80px 24px;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        font-size: 57px;
+        /* M3 Display Large */
+        line-height: 64px;
+        font-weight: 400;
+        margin-bottom: 24px;
+        letter-spacing: -0.25px;
+    }
+
+    .hero p {
+        font-size: 22px;
+        /* M3 Headline */
+        color: var(--md-sys-color-on-surface-variant);
+        margin-bottom: 40px;
+    }
+
+    /* --- M3 BUTTONS --- */
+    .button-group {
+        display: flex;
+        gap: 16px;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .btn {
+        display: inline
